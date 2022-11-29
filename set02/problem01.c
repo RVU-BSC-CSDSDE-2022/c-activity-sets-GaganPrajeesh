@@ -12,9 +12,9 @@ typedef struct _point Point;
 Point input1()
 {
   Point a;
-  printf("Enter the x co-ordinates of point 1\n");
+  printf("Enter the x co-ordinates of point 1:\n");
   scanf("%f",&a.x);
-  printf("Enter the y co-ordinates of point 1\n");
+  printf("Enter the y co-ordinates of point 1:\n");
   scanf("%f",&a.y);
   return a;
 }
@@ -22,9 +22,9 @@ Point input1()
 Point input2()
 {
   Point a;
-  printf("Enter the x co-ordinates of point 2\n");
+  printf("Enter the x co-ordinates of point 2:\n");
   scanf("%f",&a.x);
-  printf("Enter the y co-ordinates of point 2\n");
+  printf("Enter the y co-ordinates of point 2:\n");
   scanf("%f",&a.y);
   return a;
 }

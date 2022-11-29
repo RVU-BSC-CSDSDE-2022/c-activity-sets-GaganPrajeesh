@@ -5,7 +5,7 @@
 
 struct camel
 {
-	float radius, height, length,weight;
+	float radius,height,length,weight;
 };
 typedef struct camel Camel;
 
@@ -13,13 +13,13 @@ typedef struct camel Camel;
 Camel input()
 { 
   Camel c;
-  printf("Enter the radius\n");
+  printf("Enter the radius:\n");
   scanf("%f",&c.radius);
 
-  printf("Enter the height\n");
+  printf("Enter the height:\n");
   scanf("%f",&c.height);
 
-  printf("Enter the length\n");
+  printf("Enter the length:\n");
   scanf("%f",&c.length);
   return c;
 }

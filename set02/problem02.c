@@ -5,13 +5,13 @@
 
 void input_camel_details(float *radius,float *height,float *length)
   {
-    printf("Enter the radius\n");
+    printf("Enter the radius:\n");
     scanf("%f",radius);
 
-    printf("Enter the height\n");
+    printf("Enter the height:\n");
     scanf("%f",height);
 
-    printf("Enter the length\n");
+    printf("Enter the length:\n");
     scanf("%f",length);
   }
 
