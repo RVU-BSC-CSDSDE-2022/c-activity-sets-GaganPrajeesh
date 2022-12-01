@@ -4,7 +4,7 @@
 
 typedef struct _camel 
 {
-    float radius,height,length,weight;
+  float radius,height,length,weight;
 } 
 Camel;
 
