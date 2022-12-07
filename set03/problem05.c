@@ -1,40 +1,60 @@
 // Write a program to find GCD _(HCF)_ of two numbers.
 
-int input()
-{
-  int num;
-  printf("Enter a number:\n");
-  scanf("%d", &num);
-  return num;
-}
+#include <stdio.h>
 
-int find_gcd(int a,int b)
-{
-    int i, min, hcf=1;
-    /* Find minimum between two numbers */
-    min = (a<b) ? a : b;
-
-    for(i=1; i<=min; i++)
-    {
-      /* If i is factor of both number */
-      if(a%i==0 && b%i==0)
-      {
-        hcf = i;
-      }
-    }
-    return hcf;
-}
-
-void output(int a,int b,int gcd)
-{
-  printf("HCF of %d and %d = %d\n", a,b,gcd);
-}
+int input();
+int find_gcd(int a, int b);
+void output(int a, int b, int gcd);
 
 int main()
 {
-  int num1, num2, gcd;
-  num1=input();
-  num2=input();
-  gcd=find_gcd(num1,num2);
-  output(num1 ,num2 ,gcd);
+   int a,b,gcd=0;
+   a=input();
+   b=input();
+   gcd=find_gcd(a,b);
+   output(a,b,gcd);
+   return 0;
+}
+
+int input()
+{
+  int n;
+  printf("Enter the number:\n");
+  scanf("%d", &n);
+  return n;
+}
+
+int find_gcd(int a, int b)
+{
+  int divdn, div, rem=-1, gcd;
+  if(a>b)
+  {
+    divdn=a;
+    div=b;
+  }
+
+  else
+  {
+      divdn=b;
+      div=a;
+  }
+  rem=(divdn)%(div);
+  if(rem==0)
+    gcd=div;
+  else
+  {
+        while(rem!=0)
+          {
+             divdn=div;
+             div=rem;
+            rem=(divdn)%(div);
+          }
+     gcd=div;
+  }
+  return div;
+}
+
+void output(int a, int b, int gcd)
+{
+  printf("The gcd of %d and %d is %d", a,b,gcd);
 }

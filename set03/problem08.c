@@ -1,4 +1,4 @@
-// Write a program to find the triangle with smallest area in n given triangles.
+// Write a program to find the triangle with the smallest area in n given triangles.
 
 #include <stdio.h>
 
